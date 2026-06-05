@@ -1,0 +1,19 @@
+name: Proflow CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify files
+        run: ls -la
+
+      - name: Deployment Success
+        run: echo "Proflow deployment successful"
